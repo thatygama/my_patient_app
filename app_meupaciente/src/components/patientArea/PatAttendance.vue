@@ -33,7 +33,6 @@ export default {
         if(jwt == '' || typeof jwt == 'undefined' || jwt == 'null'){
             this.$router.push({name: 'acesso'})
         }
-
     }
 };
 </script>
@@ -56,9 +55,8 @@ export default {
         justify-content: center;
     }
 
-    h2{
-        display: flex;
-        justify-content: center;
+    .titleAttendance h2{
+        text-align: center;
     }
 
 </style>

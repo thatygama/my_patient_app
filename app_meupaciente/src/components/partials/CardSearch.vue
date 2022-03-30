@@ -1,6 +1,5 @@
 <template>
     <div class="cards">
-
         <div v-if="$route.meta.DoneSchedulePat || $route.meta.DoneScheduleDoc">
         <div class="card" v-for="(item, index) in agendamentos" :key=index >
             <p class="chart">
@@ -32,7 +31,6 @@
         </div>
 
         <div v-if="$route.meta.DoneAttendancePat || $route.meta.DoneAttendanceDoc">
-
         <div class="card" v-for="(item, index) in atendimentos" :key=index > 
             <p class="chart">
                 <strong>Prontuário do Paciente:</strong> {{item.patient_chart}}
@@ -60,7 +58,7 @@
             <v-btn v-on:click="setAttID" v-model="id" :value="item.id">
                     Editar
             </v-btn>
-            </div>
+        </div>
         </div>
         </div>
     </div>
@@ -127,8 +125,9 @@ export default{
 <style scoped>
     .cards{
         width: calc(100vw - 310px);
+        height: 100%;
         display: flex;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content:center;
         margin-bottom: 100px;
@@ -140,11 +139,17 @@ export default{
         padding: 30px;
         margin: 10px;
         width: 300px;
+        height: 300px;
     }
 
     .v-btn{
         margin-top: 15px;
         margin-left: 70px;
+    }
+
+    .returnZero{
+        margin-top: 30px;
+        color: #106cd4;
     }
 </style>
 

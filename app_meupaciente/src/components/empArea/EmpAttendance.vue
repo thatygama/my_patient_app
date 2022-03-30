@@ -11,7 +11,7 @@
                 <FormAttendance/>
             </div>
             <div class="titleSchedule" v-if="$route.meta.DoneAttendanceEmp">
-                <h2>Atendimentos</h2>
+                <h2>Todos os Atendimentos</h2>
                 <CardDashboard/>
             </div>
 
